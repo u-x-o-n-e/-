@@ -1,0 +1,314 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #121212; /* Fondo oscuro al estilo de Instagram */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alineamos desde arriba para que la página sea más larga */
+    height: auto; /* Permitir que el contenido se expanda verticalmente */
+    min-height: 100vh; /* Asegura que siempre haya al menos una altura de vista completa */
+    padding: 2rem;
+    overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido es largo */
+}
+
+/* Contenedor principal */
+.contenedor {
+    background: #181818; /* Fondo oscuro para el contenedor */
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 2rem; /* Separar un poco de la parte superior */
+    animation: fadeIn 1s ease-out, zoomIn 0.8s ease-out;
+}
+
+/* Título */
+.form-titulo {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #E4405F; /* Color vibrante similar al de Instagram */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Inputs */
+.text-input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 2px solid #444;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+    color: #ffffff;
+    background: #333;
+    transition: all 0.3s ease;
+}
+
+.text-input::placeholder {
+    color: #aaa;
+}
+
+.text-input:focus {
+    border-color: #E4405F; /* Azul claro para enfoque */
+    box-shadow: 0 0 10px rgba(228, 64, 95, 0.4);
+}
+
+/* Personalización */
+.personalizacion {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.personalizacion div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ddd;
+}
+
+/*.input-color,*/
+.select-forma,
+.select-esquinas,
+.input-tamaño {
+    border: 2px solid #444;
+    padding: 0.6rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background: #333;
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/*.input-color:hover,*/
+.select-forma:hover,
+.select-esquinas:hover,
+.input-tamaño:hover {
+    border-color: #E4405F; /* Rosa para hover */
+    transform: scale(1.03);
+}
+
+/* Botones */
+.btns {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+button {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(135deg, #E4405F, #833ab4); /* Efecto de gradiente como Instagram */
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #833ab4, #E4405F); /* Invertir gradiente al pasar el mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/* Contenedor QR */
+.qrcode {
+  color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+    min-height: 200px;
+    background: #292929;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 2px dashed #444;
+}
+/* Estilo del Footer */
+footer {
+    background-color: #181818; /* Fondo oscuro */
+    color: #fff;
+    padding: 2rem 1rem;
+    border-top: 2px solid #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    animation: fadeInFooter 1s ease-out;
+}
+
+/* Contenedor del contenido del footer */
+.footer-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Logo de la empresa */
+.logo-empresa {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    animation: logoAnimation 1.5s ease-out;
+}
+
+/* Descripción de la empresa */
+.descripcion {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ddd;
+    margin-top: 0.5rem; /* Separación suave entre el logo y la descripción */
+}
+
+/* Estilo para los iconos de redes sociales */
+.redes-sociales {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem; /* Añadido un pequeño espacio antes de los iconos */
+}
+
+.icono {
+    font-size: 2rem;
+    color: #fff;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icono:hover {
+    color: #E4405F; /* Color Instagram */
+    transform: scale(1.2); /* Animación de agrandamiento */
+}
+
+/* Información adicional */
+.informacion {
+    font-size: 0.9rem;
+    color: #ddd;
+    margin-top: 1rem; /* Añadido un pequeño espacio antes de la información */
+}
+
+.informacion a {
+    color: #E4405F; /* Enlace rosa */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 800;
+}
+
+.informacion a:hover {
+    color: #833ab4; /* Azul Instagram al pasar el ratón */
+}
+
+/* Estilo del enlace al nombre de la empresa */
+.empresa-link {
+    color: #E4405F;
+    font-weight: bold;
+    text-decoration: none;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+
+.empresa-link:hover {
+    color: #833ab4; /* Azul Instagram al pasar el ratón */
+}
+
+/* Animaciones */
+@keyframes fadeInFooter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoAnimation {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .footer-contenido {
+        padding: 1.5rem;
+    }
+
+    .logo-empresa {
+        width: 100px;
+    }
+
+    .redes-sociales {
+        gap: 1rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 1.5rem;
+    }
+
+    .form-titulo {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+}
