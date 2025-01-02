@@ -40,8 +40,9 @@ header {
 }
 .company-name {
   font-size: 35px;
+  
   color: #000000;
-  font-family: 'Arial', sans-serif;
+  font-family: 'HelveticaNeueRoman', sans-serif;
 }
 .menu-toggle {
   display: flex;
@@ -266,10 +267,23 @@ section.about-us {
   margin: 5px 0;
 }
 .about-image {
-  width: 100%;
-  max-width: 390px;
+  position: relative;
+  height: 100px;
+  width: auto;
   border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: url('../img/Posadas.jpeg') center center no-repeat;
+  background-size: cover;
+  z-index: 10000;
+}
+.about-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(128, 0, 128, 0.5);
+  border-radius: 5px;
 }
 .about-vision {
   background-color: transparent;
@@ -338,11 +352,22 @@ section.projects div.card{
     color: #ffffff;
 }
 section.projects div.cards div.card div.img-project{
+   position: relative;
     margin-top: 15px;
     width: 320px;
     height: 150px;
     background-color: #000;
     margin-bottom: 23px;
+}
+.a-card {
+   text-decoration: none;
+   color: #fff;
+}
+.img-project img {
+    width: 100%; /* Asegura que la imagen sea al menos tan ancha como el contenedor */
+    height: 100%; /* Asegura que la imagen sea al menos tan alta como el contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+    object-position: center; /* Centra la imagen en el contenedor */
 }
 section.projects div.cards div.card div.description-project{
     width: 320px;
@@ -350,10 +375,13 @@ section.projects div.cards div.card div.description-project{
     flex-direction: column;
     align-items: flex-start;
 }
-section.projects div.cards div.card div.description-project span.title-project{
-    font-size: 18px;
+section.projects div.cards div.card div.description-project span.title-project a{
+    font-size: 15px;
     font-weight: 500;
     margin-bottom: 6px;
+    color: #fff;
+    text-decoration: none;
+    
 }
 section.projects div.cards div.card span.tag-project {
     font-size: 14px;
@@ -470,7 +498,7 @@ section.projects div.cards div.card span.tag-project {
   .company-name {
     font-size: 40px;
     color: #000000;
-    font-family: 'Arial', sans-serif;
+    font-family: 'HelveticaNeueRoman';
   }
   .menu {
     display: flex;
